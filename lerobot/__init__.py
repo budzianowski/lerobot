@@ -49,6 +49,8 @@ from lerobot.__version__ import __version__  # noqa: F401
 # refers to a yaml file AND a modeling name. Same for `available_envs` which refers to
 # a yaml file AND a environment name. The difference should be more obvious.
 available_tasks_per_env = {
+    # pfb30
+    "kmanip": ["KManipSoloArmVision"],
     "aloha": [
         "AlohaInsertion-v0",
         "AlohaTransferCube-v0",
@@ -60,6 +62,8 @@ available_tasks_per_env = {
 available_envs = list(available_tasks_per_env.keys())
 
 available_datasets_per_env = {
+    # pfb30
+    "kmanip": ["budzianowski/sim_synth"],
     "aloha": [
         "lerobot/aloha_sim_insertion_human",
         "lerobot/aloha_sim_insertion_scripted",
@@ -138,6 +142,7 @@ available_policies = [
 
 # keys and values refer to yaml files
 available_policies_per_env = {
+    "kmanip": ["act_stompy"],
     "aloha": ["act"],
     "pusht": ["diffusion"],
     "xarm": ["tdmpc"],
